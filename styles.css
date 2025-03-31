@@ -2,15 +2,16 @@
     border-style: solid;
     background-color: aquamarine;
     height: auto;
-    width: auto;
-    margin-top: 10px;
+    width: 700px;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 .bucket-list{
     border-style: solid;
     background-color: bisque;
     height: auto;
-    width: 700px;
+    width: 540px;
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -21,16 +22,34 @@
 
 }
 
-
 .container2{
     border-style: solid;
     background-color: white;
     height: auto;
     width: 700px;
-    margin-top: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.container3{
+    display: flex;
+    border-style: solid;
+    background-color: white;
+    height: auto;
+    width: 700px;
+    margin: auto;
 }
 
 p{
     font-size: 20px;
 }
 
+.body{
+    background-color: cornflowerblue;
+}
+
+.login{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Bible Verse</title>
+    <title>JS.challenges</title>
 </head>
-<body>
+<body class="body">
+    
     <div class="container">
         <div class="bucket-list">
             <h2>
@@ -31,8 +32,6 @@
             <button id="demoButton" onclick="changeToBold()">Change Font to Bold</button>
             <button id="demobutton" onclick="revertChanges()">Revert Changes</button>
         </div>
-        
-
     </div>
 
 
@@ -51,6 +50,18 @@
         <div class="buttons">
             <button id="demoButton" onclick="changeBackground()">Change banner background</button>
             <button id="demoButton" onclick="removeBackground()">Remove design</button>
+        </div>
+    </div>
+
+    <div class="container3">
+        <div class="login">
+            <form id="login">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
         </div>
     </div>
 
@@ -82,6 +93,25 @@
             document.querySelector('.bucket').style.fontFamily = "Times New Roman, Times, serif";
 
         }
+        
+        document.getElementById("login").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let passwordCriteria = password.length > 8 && /[a-z]/.test(password) && /[A-Z]/.test(password);
+
+            if (!passwordCriteria) {
+                alert("Password must be more than 8 characters and contain both uppercase and lowercase letters.");
+                console.log("Username:", username);
+                console.log("Password:", password);
+            } else {
+                alert("Welcome "+username+"!")
+                console.log("Username:", username);
+                console.log("Password:", password);
+            }
+        });
+
         
 
 
